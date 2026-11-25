@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="120" viewBox="0 0 300 120" role="img" aria-label="Joves en Acció – Voluntariat que transforma">
+<text x="4" y="46" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="44" fill="#1B2A6B" letter-spacing="-1">JOVES</text>
+<text x="4" y="88" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="40" fill="#1B2A6B" letter-spacing="-1">EN ACCIÓ</text>
+<path d="M150 14 C 205 2, 250 18, 276 52" fill="none" stroke="#2F6FDF" stroke-width="5" stroke-linecap="round"/>
+<path d="M268 44 L284 58 L262 60 Z" fill="#2F6FDF"/>
+<text x="5" y="112" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#1B2A6B">Voluntariat que <tspan fill="#2F6FDF" font-weight="700">transforma</tspan>.</text>
+</svg>

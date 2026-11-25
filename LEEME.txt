@@ -1,0 +1,48 @@
+pk349 · Web nueva de Joves en Acció (estilo logostgn.cat) · 25-nov-2026
+
+QUÉ ES
+Web completa en catalán y castellano (15 páginas × 2 idiomas), con el mismo diseño que la web de Logos
+(mismas letras, componentes y estructura) y el color azul del logotipo de Joves en Acció.
+Páginas: Inici, Qui som, Equip i xarxa, Projectes, Espai Petit Lleure, Salut i benestar, Punt Cultural,
+Administracions i entitats, Participa, Actualitat, Impacte i resultats, Transparència, Contacte, Gràcies,
+Avís legal, Privacitat y Galetes. Textos basados en la web actual jovesenaccio.cat.
+
+PUBLICAR (GitHub Pages, como Logos)
+1. Crea un repositorio nuevo, p. ej. hafaja/Joves-en-Accio, y sube TODO el contenido de la carpeta «site»
+   (archivos y carpetas) a la raíz.
+2. Settings → Pages → Deploy from a branch → main / root. Saldrá en https://hafaja.github.io/Joves-en-Accio/
+3. Cuando esté revisada: añade un archivo CNAME con «jovesenaccio.cat» y cambia el DNS del dominio
+   (como hicimos con logostgn.cat). Las direcciones antiguas del WordPress (/qui-som/, /contacte/…)
+   redirigen solas a las nuevas.
+
+FORMULARIO DE CONTACTO
+Envía a info@jovesenaccio.cat con FormSubmit (como Logos). El PRIMER envío manda un correo de activación
+a info@jovesenaccio.cat: hay que abrirlo y pulsar «Activate». Después funciona siempre.
+
+FOTOS
+Ya puestas (17 huecos) con las 10 fotos de la excursión al puerto (barco Tarragona Blau, Moll de Costa,
+Museu del Port): portada, galería, «Molt més que activitats», equipo, Punt Cultural, Participa, Projectes,
+Impacte, familias del Espai Petit Lleure y la primera noticia.
+IMPORTANTE: salen niños/as con la cara visible. Publicad solo si las familias han firmado el permiso de imagen.
+
+Huecos que aún faltan (súbelos a site/assets/img/fotos/ con estos nombres, o pásamelos):
+  epl-curs.webp  →  Espai Petit Lleure – Durant el curs
+  epl-estiu.webp  →  Espai Petit Lleure – Estiu
+  epl-nadal.webp  →  Espai Petit Lleure – Nadal
+  qui-som.webp  →  Qui som (grupo / presentación de la asociación)
+  equip-xarxa.webp  →  Equip i xarxa (personas trabajando juntas)
+  salut.webp  →  Salut i benestar (actividad tranquila, respiración, cuidado)
+  epl-hero.webp  →  Espai Petit Lleure (portada de la página)
+  administracions.webp  →  Administracions (reunión / planificación)
+  participa-voluntariat.webp  →  Participa: voluntariado (personas colaborando)
+  actualitat-2.webp  →  Actualitat: Les famílies, una part essencial dels projectes educatius
+  actualitat-3.webp  →  Actualitat: Com convertim una necessitat educativa en un projecte
+
+LOGOTIPO
+assets/img/logo-joves-en-accio.svg es una versión limpia del logotipo actual. Si tienen el original
+en buena calidad (PNG o SVG), sustitúyelo con el mismo nombre (o pásamelo y lo adapto).
+
+POR CONFIRMAR CON JOVES EN ACCIÓ
+- Teléfono 662 26 23 23 y dirección C/ Pons d'Icart, 41 (vienen de su aviso legal): ¿se pueden mostrar?
+- Documentos de Transparència (estatutos, memoria, cuentas, junta): salen como «Properament».
+- Logotipos sin imagen (Ministerio de Igualdad, Ajuntament de Tarragona, Corresponsables): salen en texto.

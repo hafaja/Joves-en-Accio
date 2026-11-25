@@ -1,0 +1,142 @@
+/* Joves en Acció · capa pròpia sobre l'estil compartit (styles.css, el mateix del web de Logos).
+   Per canviar els colors de tot el web n'hi ha prou amb tocar aquestes variables. */
+:root {
+  --ink: #14233B;
+  --ink-2: #1E3557;
+  --gold: #6FA8F5;      /* accent (blau del logotip) */
+  --gold-ink: #1D4FA8;  /* enllaços i textos d'accent */
+  --gold-dot: #2F6FDF;
+  --tint: #E4EEFE;
+  --paper: #F7F8FB;
+  --line: #DDE3EE;
+  --line-2: #C9D2E2;
+  --on-ink: #D5DEEE;
+}
+a:hover { color: #123A80; }
+
+/* Capçalera */
+.brand img { width: 150px; height: auto; }
+.ja-top { font-size: 14px; font-weight: 600; letter-spacing: .02em; }
+.ja-top__soc { display: inline-flex; gap: 10px; margin-right: 14px; vertical-align: middle; }
+.ja-top__soc a { color: inherit; display: inline-flex; }
+.nav__btn[data-current] { color: var(--gold-ink); }
+
+/* Foto amb text al costat */
+.ja-split { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+.ja-split--rev .ja-split__img { order: 2; }
+.ja-split__img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-lg); background: var(--tint); }
+.ja-split__txt h2 { font-size: clamp(30px, 3.2vw, 42px); margin: 12px 0 16px; }
+.ja-split__txt > p { color: var(--body); font-size: 18px; }
+.ja-split__txt .ticks { margin-top: 18px; }
+.ja-h3 { font-size: 22px; margin: 22px 0 6px; }
+@media (max-width: 900px) { .ja-split { grid-template-columns: 1fr; gap: 26px; } .ja-split--rev .ja-split__img { order: 0; } }
+
+/* Targetes d'àmbit sense pestanyes (no són botons) */
+.ja-amb .amb { cursor: default; min-height: 0; }
+.ja-amb .amb span:last-child { color: var(--body); }
+
+/* Tres o cinc accessos */
+.ja-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.ja-trio--5 { grid-template-columns: repeat(5, 1fr); }
+.ja-trio__i { text-decoration: none; color: var(--ink); display: flex; flex-direction: column; gap: 10px; transition: transform .15s ease, box-shadow .15s ease; }
+.ja-trio__i:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(20, 35, 59, .10); color: var(--ink); }
+.ja-trio__i h3 { font-size: 22px; }
+.ja-trio__i p { color: var(--body); }
+@media (max-width: 1100px) { .ja-trio--5 { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 820px) { .ja-trio, .ja-trio--5 { grid-template-columns: 1fr; } }
+
+/* Xifres: 4 columnes */
+.ja-stats { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .ja-stats { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .ja-stats { grid-template-columns: 1fr; } }
+
+/* Logotips de la xarxa */
+.ja-logos { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .ja-logos { grid-template-columns: repeat(2, 1fr); } }
+
+/* Etiquetes en fila */
+.ja-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.ja-chips .tag { font-size: 16px; padding: 8px 14px; }
+
+/* Llista de dades (transparència) */
+.ja-dl { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.ja-dl li { display: grid; gap: 2px; }
+.ja-dl span { font-size: 14px; color: var(--muted); }
+.ja-dl b { font-weight: 600; color: var(--ink); }
+
+/* Documents */
+.ja-docs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.ja-docs li { display: flex; align-items: center; gap: 14px; padding: 16px 18px; background: var(--white); border: 1px solid var(--line); border-radius: var(--r-sm); }
+.ja-docs strong { flex: 1; }
+.ja-docs em { font-style: normal; font-size: 14px; font-weight: 600; color: var(--muted); background: var(--paper); border: 1px solid var(--line); padding: 4px 10px; border-radius: 999px; }
+@media (max-width: 720px) { .ja-docs { grid-template-columns: 1fr; } }
+
+/* Fotos pendents: es veu un requadre amb el nom del fitxer que cal pujar */
+img.foto.is-ph { object-fit: cover; background: var(--tint); }
+
+/* Pantalles petites */
+@media (max-width: 560px) { .ja-top { display: none; } .brand img { width: 124px; } }
+
+/* Ajustos sobre colors fixos de l'estil compartit */
+.gal__head p { color: var(--on-ink); }
+.gal__head p a { color: #fff; }
+.ja-trio > .panel, .two-col > .panel { margin-top: 0; }
+.stats::before { border-color: rgba(111, 168, 245, .16); }
+.c-card em { color: var(--muted); }
+
+/* ================= INICI destacat: fons animat càlid i jove ================= */
+:root { --sun: #FFC542; --coral: #FF7A59; --rose: #FF8FB1; --mint: #3CB98A; }
+.ja-hero { position: relative; overflow: hidden; isolation: isolate; padding-block: 72px 96px;
+  background: linear-gradient(135deg, #FFF7EA 0%, #FFEEDD 38%, #FDF1F4 62%, #EAF2FF 100%); }
+.ja-hero__bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.ja-blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: .55; will-change: transform; }
+.ja-blob.b1 { width: 520px; height: 520px; background: var(--sun); left: -140px; top: -160px; animation: jaFloat1 22s ease-in-out infinite alternate; }
+.ja-blob.b2 { width: 460px; height: 460px; background: var(--coral); right: -120px; top: 10%; opacity: .38; animation: jaFloat2 26s ease-in-out infinite alternate; }
+.ja-blob.b3 { width: 420px; height: 420px; background: #8FB8FF; left: 30%; bottom: -220px; opacity: .45; animation: jaFloat3 24s ease-in-out infinite alternate; }
+.ja-blob.b4 { width: 300px; height: 300px; background: var(--rose); left: 48%; top: -120px; opacity: .3; animation: jaFloat2 30s ease-in-out infinite alternate-reverse; }
+@keyframes jaFloat1 { to { transform: translate(140px, 90px) scale(1.15); } }
+@keyframes jaFloat2 { to { transform: translate(-120px, 80px) scale(.9); } }
+@keyframes jaFloat3 { to { transform: translate(-90px, -110px) scale(1.12); } }
+.ja-doodle { position: absolute; width: 40px; height: 40px; opacity: .85; animation: jaBob 7s ease-in-out infinite; }
+.ja-doodle.d1 { left: 4%; top: 14%; width: 46px; height: 46px; animation-duration: 9s; }
+.ja-doodle.d2 { left: 44%; top: 8%; width: 28px; height: 28px; animation-delay: -2s; }
+.ja-doodle.d3 { right: 6%; bottom: 12%; width: 34px; height: 34px; animation-delay: -4s; }
+.ja-doodle.d4 { left: 7%; bottom: 10%; width: 70px; height: 24px; animation-duration: 11s; }
+.ja-doodle.d5 { right: 40%; bottom: 7%; width: 26px; height: 26px; animation-delay: -1s; }
+.ja-doodle.d6 { right: 3%; top: 9%; width: 24px; height: 24px; animation-delay: -5s; }
+@keyframes jaBob { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-14px) rotate(12deg); } }
+.ja-hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+.ja-pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,.75); border: 1px solid rgba(20,35,59,.08); font-weight: 700; font-size: 15px; color: var(--ink); box-shadow: 0 4px 14px rgba(255,122,89,.12); }
+.ja-pill__dot { width: 9px; height: 9px; border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 4px rgba(255,122,89,.22); }
+.ja-hero h1 { font-size: clamp(42px, 5.4vw, 72px); line-height: 1.02; margin: 22px 0 20px; color: var(--ink); }
+.ja-hero h1 em { font-style: normal; position: relative; white-space: nowrap; z-index: 0; }
+.ja-hero h1 em::after { content: ""; position: absolute; left: -4px; right: -4px; bottom: .08em; height: .36em; background: var(--sun); border-radius: 8px; z-index: -1; transform: rotate(-1.5deg); }
+.ja-hero .hero__lead { font-size: 20px; color: var(--body); max-width: 560px; }
+.ja-hero .hero__ctas { margin-top: 28px; }
+.ja-hero__facts { list-style: none; padding: 0; margin: 30px 0 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.ja-hero__facts li { background: rgba(255,255,255,.8); border-radius: 16px; padding: 10px 16px; font-size: 14px; color: var(--muted); display: flex; flex-direction: column; line-height: 1.2; box-shadow: 0 6px 18px rgba(20,35,59,.06); }
+.ja-hero__facts b { font-family: var(--serif); font-size: 26px; color: var(--ink); }
+.ja-hero__media { position: relative; }
+.ja-hero .hero__slides { position: relative; aspect-ratio: 4 / 5; max-height: 600px; margin-left: auto; border-radius: 36px; overflow: hidden; transform: rotate(2deg); border: 8px solid #fff; box-shadow: 0 30px 60px rgba(20,35,59,.18); background: var(--tint); }
+.ja-hero .hero__slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .9s ease; }
+.ja-hero .hero__slide.is-on { opacity: 1; }
+.ja-sticker { position: absolute; font-weight: 800; font-size: 15px; line-height: 1.15; padding: 12px 16px; border-radius: 18px; box-shadow: 0 10px 24px rgba(20,35,59,.16); }
+.ja-sticker--a { left: -22px; bottom: 44px; background: var(--ink); color: #fff; transform: rotate(-6deg); }
+.ja-sticker--b { right: -10px; top: 26px; background: var(--sun); color: var(--ink); transform: rotate(6deg); }
+@media (max-width: 900px) {
+  .ja-hero { padding-block: 40px 64px; }
+  .ja-hero .wrap { grid-template-columns: 1fr; gap: 40px; }
+  .ja-hero .hero__slides { max-height: 460px; margin: 0 auto; }
+  .ja-sticker--a { left: 4px; } .ja-sticker--b { right: 4px; }
+}
+@media (prefers-reduced-motion: reduce) { .ja-blob, .ja-doodle { animation: none !important; } }
+
+/* Grups per edat */
+.ja-grups { display: grid; grid-template-columns: repeat(2, minmax(0, 220px)); gap: 12px; margin-top: 18px; }
+.ja-grups div { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 14px 18px; border-top: 5px solid var(--sun); }
+.ja-grups div + div { border-top-color: var(--coral); }
+.ja-grups small { display: block; color: var(--muted); font-size: 14px; }
+.ja-grups b { font-family: var(--serif); font-size: 28px; color: var(--ink); }
+/* Un toc càlid a les seccions */
+.eyebrow::before { background: var(--coral); }
+@media (max-width: 560px) { .ja-hero__facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; } .ja-hero__facts li { padding: 10px; font-size: 12.5px; } .ja-hero__facts b { font-size: 22px; } }
