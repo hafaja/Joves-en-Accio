@@ -248,3 +248,47 @@ body { background: #FFF5EA; }
 .ja-dip { display: inline-flex; align-items: center; gap: 12px; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 8px 14px; box-shadow: 0 4px 12px rgba(20,35,59,.06); }
 .ja-dip small { font-size: 13px; font-weight: 700; color: var(--muted); white-space: nowrap; }
 .ja-dip img { height: 42px; width: auto; display: block; }
+
+/* ================= RENDIMENT (27-nov) =================
+   Els difuminats (filter: blur) de taques grans animades i el «backdrop-filter» obligaven el navegador a redibuixar
+   tota la pantalla a cada fotograma: el web anava lent. Ara les taques són degradats radials (sense blur), més suaus,
+   i només es mouen les petites figures. */
+.ja-blob, .jf { filter: none !important; opacity: 1 !important; animation: none !important; will-change: auto !important; }
+.ja-blob.b1 { background: radial-gradient(closest-side, rgba(255,255,255,.85), rgba(255,255,255,0)); }
+.ja-blob.b2 { background: radial-gradient(closest-side, rgba(255,241,168,.7), rgba(255,241,168,0)); }
+.ja-blob.b3 { background: radial-gradient(closest-side, rgba(255,255,255,.9), rgba(255,255,255,0)); }
+.jf1 { background: radial-gradient(closest-side, rgba(255,211,110,.45), rgba(255,211,110,0)); }
+.jf2 { background: radial-gradient(closest-side, rgba(255,156,122,.32), rgba(255,156,122,0)); }
+.jf3 { background: radial-gradient(closest-side, rgba(159,216,194,.35), rgba(159,216,194,0)); }
+.jf4 { background: radial-gradient(closest-side, rgba(255,179,201,.32), rgba(255,179,201,0)); }
+.jf5 { background: radial-gradient(closest-side, rgba(201,184,255,.28), rgba(201,184,255,0)); }
+.header { backdrop-filter: none !important; background: rgba(255,255,255,.97); }
+.ja-st, .jfs { filter: none !important; will-change: auto; }
+.ja-hero .hero__slides { box-shadow: 0 18px 36px rgba(20,70,120,.18); }
+@media (max-width: 900px) { .jfs { display: none !important; } .ja-st { animation-duration: 14s !important; } }
+
+/* Logo «Amb el suport de» més gran */
+.ja-dip { padding: 10px 16px; }
+.ja-dip img { height: 92px; width: auto; }
+@media (max-width: 560px) { .ja-dip img { height: 76px; } }
+
+/* Fons que suren, ara RÀPIDS: només es mouen amb «transform» (la targeta gràfica ho fa sense esforç),
+   sense difuminats ni redibuixos. */
+.ja-blob, .jf { will-change: transform !important; transform: translateZ(0); }
+.ja-blob.b1 { animation: jaFloat1 22s ease-in-out infinite alternate !important; }
+.ja-blob.b2 { animation: jaFloat2 26s ease-in-out infinite alternate !important; }
+.ja-blob.b3 { animation: jaFloat3 24s ease-in-out infinite alternate !important; }
+.jf1 { animation: jaFloat1 26s ease-in-out infinite alternate !important; }
+.jf2 { animation: jaFloat2 30s ease-in-out infinite alternate !important; }
+.jf3 { animation: jaFloat3 28s ease-in-out infinite alternate !important; }
+.jf4 { animation: jaFloat2 34s ease-in-out infinite alternate-reverse !important; }
+.jf5 { animation: jaFloat1 32s ease-in-out infinite alternate-reverse !important; }
+.ja-st, .jfs { will-change: transform; }
+@media (prefers-reduced-motion: reduce) { .ja-blob, .jf, .ja-st, .jfs { animation: none !important; } }
+
+/* Banda «Amb el suport de» la Diputació: ben visible, just sota la portada */
+.ja-suport { background: #fff; border-top: 4px solid #1B7A9C; border-bottom: 1px solid var(--line); box-shadow: 0 8px 24px rgba(20,35,59,.06); position: relative; z-index: 1; }
+.ja-suport .wrap { display: flex; align-items: center; justify-content: center; gap: 36px; padding-block: 26px; flex-wrap: wrap; }
+.ja-suport img { height: 130px; width: auto; display: block; }
+.ja-suport p { margin: 0; max-width: 360px; font-size: 18px; color: var(--ink); }
+@media (max-width: 700px) { .ja-suport .wrap { gap: 12px; padding-block: 18px; text-align: center; } .ja-suport img { height: 104px; } .ja-suport p { font-size: 16px; } }
