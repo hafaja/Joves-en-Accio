@@ -231,3 +231,6 @@ body { background: #FFF5EA; }
 @media (max-width: 700px) { .jfs { opacity: .2; width: 34px; } }
 .brand img { width: 76px !important; height: 76px; box-shadow: 0 4px 12px rgba(0,0,0,.14); }
 @media (max-width: 560px) { .brand img { width: 58px !important; height: 58px; } }
+.ja-intranet { display: inline-flex; align-items: center; gap: 6px; margin-right: 16px; padding: 5px 12px; border-radius: 999px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35); color: #fff; font-size: 14px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.ja-intranet:hover, .ja-intranet:focus-visible { background: #fff; color: var(--ink); }
+@media (max-width: 560px) { .ja-intranet { margin-right: 8px; padding: 4px 10px; font-size: 13px; } }
