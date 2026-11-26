@@ -229,3 +229,5 @@ body { background: #FFF5EA; }
 .section, .section--tight { background: transparent; }
 .header { background: rgba(255,255,255,.92); backdrop-filter: blur(8px); }
 @media (max-width: 700px) { .jfs { opacity: .2; width: 34px; } }
+.brand img { width: 76px !important; height: 76px; box-shadow: 0 4px 12px rgba(0,0,0,.14); }
+@media (max-width: 560px) { .brand img { width: 58px !important; height: 58px; } }

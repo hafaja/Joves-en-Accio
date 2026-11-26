@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="120" viewBox="0 0 300 120" role="img" aria-label="Joves en Acció – Voluntariat que transforma">
-<text x="4" y="46" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="44" fill="#1B2A6B" letter-spacing="-1">JOVES</text>
-<text x="4" y="88" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="40" fill="#1B2A6B" letter-spacing="-1">EN ACCIÓ</text>
-<path d="M150 14 C 205 2, 250 18, 276 52" fill="none" stroke="#2F6FDF" stroke-width="5" stroke-linecap="round"/>
-<path d="M268 44 L284 58 L262 60 Z" fill="#2F6FDF"/>
-<text x="5" y="112" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#1B2A6B">Voluntariat que <tspan fill="#2F6FDF" font-weight="700">transforma</tspan>.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Joves en Acció">
+<circle cx="100" cy="100" r="98" fill="#1E2430"/>
+<path d="M14 92 C 34 140, 150 148, 182 92" fill="none" stroke="#4F7FD9" stroke-width="7" stroke-linecap="round"/>
+<path d="M172 82 L192 86 L182 104 Z" fill="#4F7FD9"/>
+<text x="100" y="112" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="31" fill="#FFFFFF" textLength="172" lengthAdjust="spacingAndGlyphs">JOVES <tspan font-weight="400" font-size="24">en</tspan> ACCIÓ</text>
 </svg>
