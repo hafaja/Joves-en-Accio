@@ -292,3 +292,9 @@ body { background: #FFF5EA; }
 .ja-suport img { height: 130px; width: auto; display: block; }
 .ja-suport p { margin: 0; max-width: 360px; font-size: 18px; color: var(--ink); }
 @media (max-width: 700px) { .ja-suport .wrap { gap: 12px; padding-block: 18px; text-align: center; } .ja-suport img { height: 104px; } .ja-suport p { font-size: 16px; } }
+
+/* Petit Lleure + «Amb el suport de» Diputació, un al costat de l'altre */
+.ja-pl-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 8px; }
+.ja-pl-row .ja-pl-logo { margin: 0; }
+.ja-pl-dip { height: 104px; width: auto; background: #fff; border-radius: 16px; padding: 10px 14px; box-shadow: 0 6px 16px rgba(20,35,59,.10); }
+@media (max-width: 560px) { .ja-pl-row .ja-pl-logo { width: 160px; } .ja-pl-dip { height: 84px; } }
